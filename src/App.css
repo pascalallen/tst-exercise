@@ -1,0 +1,12 @@
+.app-page {
+    header {
+        text-align: center;
+    }
+
+    .login-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

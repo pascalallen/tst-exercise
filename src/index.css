@@ -1,0 +1,31 @@
+/* theme colors*/
+
+:root {
+    --navy: #05386B;
+    --emerald: #379683;
+    --malachite: #5CDB95;
+    --teal: #8EE4AF;
+    --alabaster: #EDF5E1;
+}
+
+body {
+    background-color: var(--malachite);
+    color: var(--alabaster);
+    font-family: Helvetica, serif;
+    text-transform: uppercase;
+
+    form {
+        .form-group {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                font-size: x-small;
+            }
+
+            input {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

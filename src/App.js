@@ -1,3 +1,4 @@
+import './App.css';
 import { useState } from "react";
 
 const App = () => {
@@ -41,7 +42,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div id="app-page" className="app-page">
       <header>
         <h1>TST coding exercise</h1>
       </header>
@@ -60,20 +61,20 @@ const App = () => {
                 </div>
               </>
           ) : (
-              <form onSubmit={handleLogin}>
-                <div>
+              <form onSubmit={handleLogin} id="login-form" className="login-form">
+                <div className="form-group">
                   <label htmlFor="email-address">Email address</label>
                   <input id="email-address" type="email" name="email_address" placeholder="name@example.com"/>
                 </div>
-                <div>
+                <div className="form-group">
                   <label htmlFor="password">Password</label>
                   <input id="password" type="password" name="password" placeholder="Password"/>
                 </div>
-                <div>
+                <div className="form-group">
                   <label htmlFor="confirm-password">Confirm Password</label>
                   <input id="confirm-password" type="password" name="confirm_password" placeholder="Confirm Password"/>
                 </div>
-                <div>
+                <div className="form-group">
                   <button type="submit">Register</button>
                 </div>
               </form>
