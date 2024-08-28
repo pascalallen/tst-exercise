@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function App() {
+const App = () => {
   const [validationError, setValidationError] = useState('');
   const [showValidationError, setShowValidationError] = useState(false);
   const [authenticated, setAuthenticated] = useState(false);
@@ -82,6 +82,6 @@ function App() {
       </main>
     </div>
   );
-}
+};
 
 export default App;
