@@ -1,11 +1,18 @@
 import './App.css';
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import ValidationError from "./components/ValidationError";
 
 const App = () => {
   const [validationError, setValidationError] = useState('');
   const [showValidationError, setShowValidationError] = useState(false);
   const [authenticated, setAuthenticated] = useState(false);
+
+  useEffect(() => {
+    const authData = localStorage.getItem('auth_data');
+    if (authData !== null) {
+      setAuthenticated(true);
+    }
+  }, []);
 
   const handleLogin = (e) => {
     e.preventDefault();
