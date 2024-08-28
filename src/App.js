@@ -71,7 +71,7 @@ const App = () => {
                   <label htmlFor="confirm-password">Confirm Password</label>
                   <input id="confirm-password" type="password" name="confirm_password" placeholder="Confirm Password"/>
                 </div>
-                <div className="form-group">
+                <div className="form-group form-submit">
                   <button type="submit">Register</button>
                 </div>
               </form>

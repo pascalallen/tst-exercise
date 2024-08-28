@@ -19,13 +19,50 @@ body {
         .form-group {
             display: flex;
             flex-direction: column;
+            margin-bottom: 1.5rem;
 
             label {
                 font-size: x-small;
+                margin-bottom: 0.5rem;
             }
 
             input {
-                margin-bottom: 1rem;
+                padding: 0.75rem;
+                font-size: 1rem;
+                border: 1px solid var(--emerald);
+                border-radius: 4px;
+                outline: none;
+            }
+
+            input:focus,
+            textarea:focus,
+            select:focus {
+                border-color: var(--emerald);
+                box-shadow: 0 0 5px var(--emerald);
+            }
+        }
+
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .form-submit {
+            display: flex;
+            justify-content: center;
+
+            button {
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+                color: var(--navy);
+                background-color: var(--alabaster); /* Button background color */
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: var(--navy);
+                color: var(--alabaster);
             }
         }
     }
