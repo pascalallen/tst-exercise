@@ -49,7 +49,7 @@ const App = () => {
       <main>
         <section>
           {showValidationError && (
-              <div>
+              <div className="validation-error">
                 Validation error: {validationError}
               </div>
           )}
