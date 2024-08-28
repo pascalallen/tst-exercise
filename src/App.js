@@ -51,12 +51,12 @@ const App = () => {
         <section>
           {showValidationError && <ValidationError errorMessage={validationError} />}
           {authenticated ? (
-              <>
-                <div>Authenticated!</div>
+              <div className="authenticated">
+                <h1>Authenticated!</h1>
                 <div>
                   <button type="button" onClick={handleLogout}>Logout</button>
                 </div>
-              </>
+              </div>
           ) : (
               <form onSubmit={handleLogin} id="login-form" className="login-form">
                 <div className="form-group">
