@@ -64,7 +64,7 @@ const App = () => {
               <form onSubmit={handleLogin} id="login-form" className="login-form">
                 <div className="form-group">
                   <label htmlFor="email-address">Email address</label>
-                  <input id="email-address" type="email" name="email_address" placeholder="name@example.com"/>
+                  <input id="email-address" type="email" name="email_address" placeholder="Email address"/>
                 </div>
                 <div className="form-group">
                   <label htmlFor="password">Password</label>
