@@ -3,14 +3,6 @@
         text-align: center;
     }
 
-    .validation-error {
-        align-items: center;
-        color: var(--red);
-        display: flex;
-        justify-content: center;
-        margin-bottom: 1rem;
-    }
-
     .login-form {
         align-items: center;
         display: flex;

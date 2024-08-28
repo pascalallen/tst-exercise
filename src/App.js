@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from "react";
+import ValidationError from "./components/ValidationError";
 
 const App = () => {
   const [validationError, setValidationError] = useState('');
@@ -48,11 +49,7 @@ const App = () => {
       </header>
       <main>
         <section>
-          {showValidationError && (
-              <div className="validation-error">
-                Validation error: {validationError}
-              </div>
-          )}
+          {showValidationError && <ValidationError errorMessage={validationError} />}
           {authenticated ? (
               <>
                 <div>Authenticated!</div>
