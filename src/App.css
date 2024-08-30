@@ -26,7 +26,8 @@
         button:hover {
             background-color: var(--navy);
             color: var(--alabaster);
-        }    }
+        }
+    }
 
     .login-form {
         align-items: center;
