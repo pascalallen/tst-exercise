@@ -9,10 +9,9 @@
 ## Core Project Tree
 
 ```
-├── .github/       # GitHub Actions (CI/CD pipeline)
-├── node_modules/  # Application dependencies
-├── public/        # Public web assets
-└── src/           # Application
+├── .github/  # GitHub Actions (CI/CD pipeline)
+├── public/   # Public web assets
+└── src/      # Application
 ```
 
 ## Prerequisites
