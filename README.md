@@ -27,8 +27,6 @@
 cd <projects-parent-directory> && git clone https://github.com/pascalallen/tst-exercise.git
 ```
 
-You will find the site running at [http://localhost:8080/](http://localhost:8080/)
-
 ### Install JavaScript Dependencies
 
 ```bash
@@ -46,6 +44,8 @@ npm run dev
 ```bash
 npm run start
 ```
+
+You will find the site running at [http://localhost:8080/](http://localhost:8080/)
 
 ## License
 
