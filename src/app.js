@@ -2,7 +2,6 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './assets/css/app.css';
 import IndexPage from './pages/IndexPage';
-import reportWebVitals from './reportWebVitals';
 
 const container = document.getElementById('root');
 if (container === null) {
@@ -19,5 +18,3 @@ const App = () => {
 
 const root = createRoot(container);
 root.render(<App />);
-
-reportWebVitals();

@@ -1,0 +1,5 @@
+.invalid-feedback {
+    color: var(--red);
+    font-size: small;
+    margin-top: 0.2rem;
+}

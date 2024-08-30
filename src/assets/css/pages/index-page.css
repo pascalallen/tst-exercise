@@ -1,4 +1,4 @@
-.app-page {
+.index-page {
     display: flex;
     flex-direction: column;
 
@@ -12,28 +12,49 @@
             place-items: center;
 
             .authenticated {
+                align-items: center;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
 
                 h1 {
                     margin-bottom: 1.5rem;
                 }
 
                 button {
-                    padding: 0.75rem 1.5rem;
-                    font-size: 1rem;
-                    color: var(--navy);
-                    background-color: var(--alabaster);
+                    background-color: var(--soft-yellow);
                     border: none;
                     border-radius: 4px;
+                    color: var(--dark-navy-blue);
                     cursor: pointer;
+                    font-size: 1rem;
+                    padding: 0.75rem 1.5rem;
                 }
 
                 button:hover {
-                    background-color: var(--navy);
-                    color: var(--alabaster);
+                    background-color: var(--dark-navy-blue);
+                    color: var(--soft-yellow);
+                }
+            }
+
+            form {
+                .form-submit {
+                    display: flex;
+                    justify-content: center;
+
+                    button {
+                        background-color: var(--soft-yellow);
+                        border: none;
+                        border-radius: 4px;
+                        color: var(--dark-navy-blue);
+                        cursor: pointer;
+                        padding: 0.75rem 1.5rem;
+                    }
+
+                    button:hover {
+                        background-color: var(--dark-navy-blue);
+                        color: var(--soft-yellow);
+                    }
                 }
             }
         }

@@ -1,5 +1,4 @@
-import '../assets/css/pages/index-page.css';
-import {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Form from "../components/Form/Form";
 import InputControl from "../components/InputControl/InputControl";
 
@@ -84,7 +83,7 @@ const IndexPage = () => {
     const toggleShowConfirmPassword = () => setShowConfirmPassword(!showConfirmPassword);
 
     return (
-        <div id="app-page" className="app-page">
+        <div id="index-page" className="index-page">
             <header>
                 <h1>TST coding exercise</h1>
             </header>
@@ -93,8 +92,15 @@ const IndexPage = () => {
                     {authenticated ? (
                         <div className="authenticated">
                             <h1>Authenticated!</h1>
-                            <div>
-                                <button type="button" onClick={handleLogout}>Logout</button>
+                            <div className="form-group">
+                                <button
+                                    id="logout-button"
+                                    className="logout-button"
+                                    type="button"
+                                    onClick={handleLogout}
+                                >
+                                    Logout
+                                </button>
                             </div>
                         </div>
                     ) : (
