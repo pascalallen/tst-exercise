@@ -1,7 +1,7 @@
-import './App.css';
+import '../assets/css/pages/index-page.css';
 import {useEffect, useState} from "react";
-import Form from "./components/Form/Form";
-import InputControl from "./components/InputControl/InputControl";
+import Form from "../components/Form/Form";
+import InputControl from "../components/InputControl/InputControl";
 
 const initialState = {
     errors: {
@@ -17,7 +17,7 @@ const initialState = {
     authenticated: false
 };
 
-const App = () => {
+const IndexPage = () => {
     const [errors, setErrors] = useState(initialState.errors);
     const [emailAddress, setEmailAddress] = useState(initialState.emailAddress);
     const [password, setPassword] = useState(initialState.password);
@@ -160,4 +160,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default IndexPage;

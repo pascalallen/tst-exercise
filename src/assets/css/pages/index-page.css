@@ -1,0 +1,41 @@
+.app-page {
+    display: flex;
+    flex-direction: column;
+
+    header {
+        text-align: center;
+    }
+
+    main {
+        section {
+            display: grid;
+            place-items: center;
+
+            .authenticated {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h1 {
+                    margin-bottom: 1.5rem;
+                }
+
+                button {
+                    padding: 0.75rem 1.5rem;
+                    font-size: 1rem;
+                    color: var(--navy);
+                    background-color: var(--alabaster);
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+
+                button:hover {
+                    background-color: var(--navy);
+                    color: var(--alabaster);
+                }
+            }
+        }
+    }
+}
