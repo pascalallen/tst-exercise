@@ -1,0 +1,15 @@
+@import "settings/variables.css";
+
+body {
+    background-color: var(--light-sky-blue);
+    color: var(--soft-yellow);
+    font-family: Helvetica, serif;
+    text-transform: uppercase;
+}
+
+@import "components/feedback.css";
+@import "components/form-group.css";
+@import "components/form-label.css";
+@import "components/input.css";
+@import "components/password-toggle.css";
+@import "pages/index-page.css";

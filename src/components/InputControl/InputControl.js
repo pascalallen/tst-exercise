@@ -4,7 +4,7 @@ import FormGroup from '../FormGroup/FormGroup';
 import FormLabel from '../FormLabel/FormLabel';
 import FormText from '../FormText/FormText';
 import Input from '../Input/Input';
-import PasswordToggle from "../ShowPasswordToggle/PasswordToggle";
+import PasswordToggle from "../PasswordToggle/PasswordToggle";
 
 const InputControl = (props) => {
     const {

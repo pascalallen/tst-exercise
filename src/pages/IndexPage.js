@@ -1,7 +1,6 @@
-import './App.css';
-import {useEffect, useState} from "react";
-import Form from "./components/Form/Form";
-import InputControl from "./components/InputControl/InputControl";
+import React, { useEffect, useState } from "react";
+import Form from "../components/Form/Form";
+import InputControl from "../components/InputControl/InputControl";
 
 const initialState = {
     errors: {
@@ -17,7 +16,7 @@ const initialState = {
     authenticated: false
 };
 
-const App = () => {
+const IndexPage = () => {
     const [errors, setErrors] = useState(initialState.errors);
     const [emailAddress, setEmailAddress] = useState(initialState.emailAddress);
     const [password, setPassword] = useState(initialState.password);
@@ -84,7 +83,7 @@ const App = () => {
     const toggleShowConfirmPassword = () => setShowConfirmPassword(!showConfirmPassword);
 
     return (
-        <div id="app-page" className="app-page">
+        <div id="index-page" className="index-page">
             <header>
                 <h1>TST coding exercise</h1>
             </header>
@@ -93,8 +92,15 @@ const App = () => {
                     {authenticated ? (
                         <div className="authenticated">
                             <h1>Authenticated!</h1>
-                            <div>
-                                <button type="button" onClick={handleLogout}>Logout</button>
+                            <div className="form-group">
+                                <button
+                                    id="logout-button"
+                                    className="logout-button"
+                                    type="button"
+                                    onClick={handleLogout}
+                                >
+                                    Logout
+                                </button>
                             </div>
                         </div>
                     ) : (
@@ -160,4 +166,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default IndexPage;
