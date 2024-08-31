@@ -2,7 +2,7 @@
   "name": "tst-exercise",
   "version": "0.1.0",
   "description": "TST coding exercise",
-  "main": "src/app.js",
+  "main": "src/app.jsx",
   "repository": "https://github.com/pascalallen/tst-exercise",
   "author": "Pascal Allen",
   "license": "MIT",

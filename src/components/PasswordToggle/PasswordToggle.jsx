@@ -4,7 +4,7 @@ const PasswordToggle = (props) => {
     const { children, className, onClick } = props;
 
     return (
-        <span className={`password-toggle ${className}`} onClick={onClick}>
+        <span className={`password-toggle ${className} cursor-pointer position-absolute`} onClick={onClick}>
             {children}
         </span>
     );

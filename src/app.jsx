@@ -1,7 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { storesInstance, StoresProvider } from './stores/Stores';
+import Router from "./routes/Router";
 import './assets/css/app.css';
-import IndexPage from './pages/IndexPage';
 
 const container = document.getElementById('root');
 if (container === null) {
@@ -11,7 +12,9 @@ if (container === null) {
 const App = () => {
     return (
         <React.StrictMode>
-            <IndexPage />
+            <StoresProvider value={storesInstance}>
+                <Router />
+            </StoresProvider>
         </React.StrictMode>
     );
 };

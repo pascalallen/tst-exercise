@@ -1,10 +1,11 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/app.js',
+    entry: './src/app.jsx',
     devtool: 'inline-source-map',
     devServer: {
         static: './public',
+        historyApiFallback: true,
         hot: true,
         devMiddleware: { writeToDisk: true }
     },
