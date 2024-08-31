@@ -1,15 +1,36 @@
-@import "settings/variables.css";
+@import 'settings/variables.css';
 
 body {
-    background-color: var(--light-sky-blue);
-    color: var(--soft-yellow);
+    background-color: var(--dark-grey);
+    color: var(--light-grey);
     font-family: Helvetica, serif;
-    text-transform: uppercase;
 }
 
-@import "components/feedback.css";
-@import "components/form-group.css";
-@import "components/form-label.css";
-@import "components/input.css";
-@import "components/password-toggle.css";
-@import "pages/index-page.css";
+a {
+    color: var(--turquoise);
+    text-decoration: none;
+}
+
+button {
+    background-color: var(--turquoise);
+    border: none;
+    color: var(--light-grey);
+    cursor: pointer;
+    padding: 0.5em 1em;
+}
+
+button:hover {
+    background-color: var(--slate-grey);
+    color: var(--turquoise);
+}
+
+@import 'settings/border.css';
+@import 'settings/interaction.css';
+@import 'settings/layout.css';
+@import 'settings/text.css';
+@import 'components/feedback.css';
+@import 'components/footer.css';
+@import 'components/form-group.css';
+@import 'components/form-label.css';
+@import 'components/input.css';
+@import 'components/password-toggle.css';

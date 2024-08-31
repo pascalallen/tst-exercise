@@ -1,11 +1,18 @@
 /* Variables */
 
-/* Theme colors */
-
 :root {
-    --dark-navy-blue: #16325B;
-    --light-sky-blue-blue: #227B94;
-    --light-sky-blue: #78B7D0;
-    --soft-yellow: #FFDC7F;
-    --red: #F44336;
+    /* Theme colors */
+    --dark-grey: #222831;
+    --slate-grey: #393E46;
+    --turquoise: #00ADB5;
+    --light-grey: #EEEEEE;
+    --red: #FF4C4C;
+
+    /* Media query breakpoints */
+    --xs: 0;
+    --sm: 576px;
+    --md: 768px;
+    --lg: 992px;
+    --xl: 1200px;
+    --xxl: 1400px;
 }
