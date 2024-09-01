@@ -36,37 +36,43 @@ const LoginPage = () => {
         }
     }, [password]);
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
 
-        setErrors(initialState.errors);
+        let newErrors = { ...initialState.errors };
 
         if (emailAddress.length <= 0) {
-            setErrors({...errors, emailAddress: 'Email address is required'});
-            return;
-        }
-
-        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailAddress) === false) {
-            setErrors({...errors, emailAddress: 'Invalid email address'});
-            return;
+            newErrors.emailAddress = 'Email address is required';
+        } else if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailAddress) === false) {
+            newErrors.emailAddress = 'Invalid email address';
         }
 
         if (password.length <= 0) {
-            setErrors({...errors, password: 'Password is required'});
+            newErrors.password = 'Password is required';
+        }
+
+        setErrors(newErrors);
+
+        const hasErrors = Object.values(newErrors).some(item => item.length > 0);
+        if (hasErrors) {
             return;
         }
 
-        authService.login({
-            email_address: emailAddress,
-            password: password
-        });
-
-        return navigate(Path.INDEX);
+        try {
+            await authService.login({ email_address: emailAddress, password: password });
+            navigate(Path.INDEX);
+        } catch (err) {
+            setErrors({ ...newErrors, emailAddress: 'Invalid email address and/or password' });
+        }
     };
 
     const handleEmailAddressChange = (e) => setEmailAddress(e.target.value);
     const handlePasswordChange = (e) => setPassword(e.target.value);
     const toggleShowPassword = () => setShowPassword(!showPassword);
+    const handleSignUpClick = (e) => {
+        e.preventDefault();
+        navigate(Path.REGISTER);
+    };
 
     return (
         <div id="login-page" className="login-page d-flex flex-column vh-100">
@@ -115,6 +121,7 @@ const LoginPage = () => {
                             </button>
                         </div>
                     </Form>
+                    <p>Don't have an account yet? <a href={Path.REGISTER} onClick={handleSignUpClick}>Sign up here.</a></p>
                 </section>
             </main>
             <Footer />
