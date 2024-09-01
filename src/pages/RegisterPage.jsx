@@ -45,38 +45,44 @@ const RegisterPage = () => {
         }
     }, [password, confirmPassword]);
 
-    const handleRegistration = (e) => {
+    const handleRegistration = async (e) => {
         e.preventDefault();
 
-        setErrors(initialState.errors);
+        let newErrors = {...initialState.errors};
 
         if (emailAddress.length <= 0) {
-            setErrors({...errors, emailAddress: 'Email address is required'});
-            return;
-        }
-
-        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailAddress) === false) {
-            setErrors({...errors, emailAddress: 'Invalid email address'});
-            return;
+            newErrors.emailAddress = 'Email address is required';
+        } else if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailAddress) === false) {
+            newErrors.emailAddress = 'Invalid email address';
         }
 
         if (password.length <= 0) {
-            setErrors({...errors, password: 'Password is required'});
+            newErrors.password = 'Password is required';
+        }
+
+        if (confirmPassword.length <= 0) {
+            newErrors.confirmPassword = 'Password confirmation is required';
+        } else if (password !== confirmPassword) {
+            newErrors.confirmPassword = 'Passwords do not match';
+        }
+
+        setErrors(newErrors);
+
+        let hasErrors = Object.values(newErrors).some(item => item.length > 0);
+        if (hasErrors) {
             return;
         }
 
-        if (password !== confirmPassword) {
-            setErrors({...errors, confirmPassword: 'Password confirmation is required'});
-            return;
+        try {
+            await authService.register({
+                email_address: emailAddress,
+                password: password,
+                confirm_password: confirmPassword
+            });
+            navigate(Path.INDEX);
+        } catch (err) {
+            setErrors({ ...newErrors, emailAddress: 'Invalid email address and/or password' });
         }
-
-        authService.register({
-            email_address: emailAddress,
-            password: password,
-            confirm_password: confirmPassword
-        });
-
-        return navigate(Path.INDEX);
     };
 
     const handleEmailAddressChange = (e) => setEmailAddress(e.target.value);
@@ -84,6 +90,10 @@ const RegisterPage = () => {
     const handleConfirmPasswordChange = (e) => setConfirmPassword(e.target.value);
     const toggleShowPassword = () => setShowPassword(!showPassword);
     const toggleShowConfirmPassword = () => setShowConfirmPassword(!showConfirmPassword);
+    const handleSignInClick = (e) => {
+        e.preventDefault();
+        navigate(Path.LOGIN);
+    };
 
     return (
         <div id="register-page" className="register-page d-flex flex-column vh-100">
@@ -147,9 +157,10 @@ const RegisterPage = () => {
                             </button>
                         </div>
                     </Form>
+                    <p>Already have an account? <a href={Path.LOGIN} onClick={handleSignInClick}>Log in here.</a></p>
                 </section>
             </main>
-            <Footer />
+            <Footer/>
         </div>
     );
 };
