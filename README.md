@@ -1,10 +1,22 @@
-# TST exercise
+# Vanilla (React) web client 🚀
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/pascalallen/tst-exercise/npm.yml)
-![GitHub](https://img.shields.io/github/license/pascalallen/tst-exercise)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/pascalallen/tst-exercise)
+## Motivation
 
-![Logo](src/assets/images/logo.svg)
+The motivation behind this project is to demonstrate foundational frontend skills without extraneous dependencies. 
+This project uses only React, JSX, CSS, and Webpack, focusing on core functionality without relying on any third-party 
+libraries.
+
+## Features
+
+- Configurable CI/CD pipeline
+- Homegrown CSS theming
+- Reusable React components
+- User registration with persistence
+- Authentication
+- Custom router w/ routing utilities
+- Custom authenticator service
+- Custom React hooks
+- Bundling with Webpack
 
 ## Core Project Tree
 
@@ -23,7 +35,7 @@
 ### Clone Repository
 
 ```bash
-cd <projects-parent-directory> && git clone https://github.com/pascalallen/tst-exercise.git
+cd <projects-parent-directory> && git clone https://github.com/pascalallen/vanilla-react.git
 ```
 
 ### Install JavaScript Dependencies

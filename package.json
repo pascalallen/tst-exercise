@@ -1,9 +1,9 @@
 {
-  "name": "tst-exercise",
+  "name": "vanilla-react",
   "version": "0.1.0",
-  "description": "TST coding exercise",
+  "description": "The motivation behind this project is to demonstrate foundational frontend skills without extraneous dependencies. This project uses only React, JSX, CSS, and Webpack, focusing on core functionality without relying on any third-party libraries.",
   "main": "src/app.jsx",
-  "repository": "https://github.com/pascalallen/tst-exercise",
+  "repository": "https://github.com/pascalallen/vanilla-react",
   "author": "Pascal Allen",
   "license": "MIT",
   "private": true,
